@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)https://upload-widget-s.cloudinary.com/2.3.34/widget/index.html?cloudName=dtfdnax1n&pmHost=https://cloudinary.com -->
+<html lang="en" class="js-focus-visible" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><title>Cloudinary Upload Widget 2.0</title><script>(function (){
+			var env = "production";
+			var version = "1.56.34";
+			var rollbarToken = "9b23049a904048739657a2d9498f6f68";
+
+			var _rollbarConfig = {
+				enabled: env === "production",
+				accessToken: rollbarToken,
+				ignoredMessages: [
+				"Script error",
+				"Invalid or unexpected token",
+				"Unexpected identifier",
+				"Unexpected end of input",
+				"Cannot redefine property",
+				"NS_ERROR_FILE_NOT_FOUND",
+				"webpackJsonp is not defined",
+				"Error: Access is denied.",
+				"e[n] is undefined",
+				"Unexpected token 'const'",
+				"Use of const in strict mode"],
+				hostWhiteList: ["widget.cloudinary.com"],
+				captureUncaught: true,
+				captureUnhandledRejections: true,
+				payload: {
+					environment: env,
+					client: {
+						javascript: {
+							source_map_enabled: true,
+							code_version: version,
+							guess_uncaught_frames: true
+						}
+					}
+				},
+				reportLevel: "error",
+			};
+
+			if (_rollbarConfig.enabled) {
+				// Rollbar Snippet
+				!function(r){var e={};function o(n){if(e[n])return e[n].exports;var t=e[n]={i:n,l:!1,exports:{}};return r[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=e,o.d=function(r,e,n){o.o(r,e)||Object.defineProperty(r,e,{enumerable:!0,get:n})},o.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},o.t=function(r,e){if(1&e&&(r=o(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)o.d(n,t,function(e){return r[e]}.bind(null,t));return n},o.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return o.d(e,"a",e),e},o.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},o.p="",o(o.s=0)}([function(r,e,o){var n=o(1),t=o(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.11.0/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){var n=o(2);function t(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}var a=0;function l(r,e){this.options=r,this._rollbarOldOnError=null;var o=a++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}var i=o(3),d=function(r,e){return new l(r,e)},s=function(r){return new i(d,r)};function c(r){return t(function(){var e=Array.prototype.slice.call(arguments,0),o={shim:this,method:r,args:e,ts:new Date};window._rollbarShims[this.shimId()].messages.push(o)})}l.prototype.loadFull=function(r,e,o,n,a){var l=!1,i=e.createElement("script"),d=e.getElementsByTagName("script")[0],s=d.parentNode;i.crossOrigin="",i.src=n.rollbarJsUrl,o||(i.async=!0),i.onload=i.onreadystatechange=t(function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){i.onload=i.onreadystatechange=null;try{s.removeChild(i)}catch(r){}l=!0,function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,t,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(t=n.args||[],i=0;i<t.length;++i)if("function"==typeof(l=t[i])){l(e);break}}"function"==typeof a&&a(e)}()}}),s.insertBefore(i,d)},l.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),u=0;u<p.length;++u)l.prototype[p[u]]=c(p[u]);r.exports={setupShim:function(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var a=new s(e);return t(function(){e.captureUncaught&&(a._rollbarOldOnError=r.onerror,n.captureUncaughtExceptions(r,a,!0),e.wrapGlobalEventHandlers&&n.wrapGlobals(r,a,!0)),e.captureUnhandledRejections&&n.captureUnhandledRejections(r,a,!0);var t=e.autoInstrument;return!1!==e.enabled&&(void 0===t||!0===t||"object"==typeof t&&t.network)&&r.addEventListener&&(r.addEventListener("load",a.captureLoad.bind(a)),r.addEventListener("DOMContentLoaded",a.captureDomContentLoaded.bind(a))),r[o]=a,a})()}},Rollbar:s}},function(r,e){function o(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports={captureUncaughtExceptions:function(r,e,o){if(r){var n;if("function"==typeof e._rollbarOldOnError)n=e._rollbarOldOnError;else if(r.onerror){for(n=r.onerror;n._rollbarOldOnError;)n=n._rollbarOldOnError;e._rollbarOldOnError=n}e.handleAnonymousErrors();var t=function(){var o=Array.prototype.slice.call(arguments,0);!function(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null),e.handleUncaughtException.apply(e,n),o&&o.apply(r,n)}(r,e,n,o)};o&&(t._rollbarOldOnError=n),r.onerror=t}},captureUnhandledRejections:function(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}},wrapGlobals:function(r,e,n){if(r){var t,a,l="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(t=0;t<l.length;++t)r[a=l[t]]&&r[a].prototype&&o(e,r[a].prototype,n)}}}},function(r,e){function o(r,e){this.impl=r(e,this),this.options=e,function(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}(o.prototype)}o.prototype._swapAndProcessMessages=function(r,e){var o,n,t;for(this.impl=r(this.options);o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=o},function(r,e){r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){for(var o,n,t=(r=r||{}).globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+				// End Rollbar Snippet
+			}
+        })();</script><script defer="defer" src="./runtime.js.download"></script><script defer="defer" src="./main.js.download"></script><link href="./main.css" rel="stylesheet"><style type="text/css" data-glamor=""></style><style data-styled="active" data-styled-version="5.1.0"></style><link href="./css2" rel="stylesheet"><style type="text/css" data-customization="palette,font">
+        .font-root {
+        font-family: 'Inter', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+    }
+        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                .bg-window,
+                .bg-window-hover:hover {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bg-window-c,
+                .bg-window-c > a,
+                a.bg-window-c {
+                    color: #0a0c0f;
+                }
+
+                .bg-window-fill,
+                .fill-bg-window {
+                    fill: #0a0c0f;
+                }
+
+                /* -- */
+                .c-window,
+                .c-window > a,
+                a.c-window,
+                .c-window-hover:hover {
+                    color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-window {
+                    border-color: #ffffff;
+                }
+
+                .fill-window,
+                .fill-window path,
+                .fill-window-hover:hover path {
+                    fill: #ffffff;
+                }
+                .bg-window-fill,
+                .fill-bg-window {
+                    fill: #0a0c0f;
+                }
+
+                /* -- */
+                .c-window,
+                .c-window > a,
+                a.c-window,
+                .c-window-hover:hover {
+                    color: #ffffff;
+                }
+
+                .c-window-bg {
+                    background-color: #0a0c0f;
+                }
+
+                /* -- */
+
+                .bc-window {
+                    border-color: #ffffff;
+                }
+
+                .fill-window,
+                .fill-window path,
+                .fill-window-hover:hover path {
+                    fill: #ffffff;
+                }
+
+                .fill-window-c {
+                    fill: #0a0c0f;
+                }
+
+                .circle-window circle {
+                    stroke: #ffffff;
+                }
+            
+
+                .bg-window-border,
+                .bg-window-border-hover:hover {
+                    background-color: #c2c9d6;
+                }
+
+                /* -- */
+
+                .bg-window-border-c,
+                .bg-window-border-c > a,
+                a.bg-window-border-c {
+                    color: #0a0c0f;
+                }
+
+                .bg-window-border-fill,
+                .fill-bg-window-border {
+                    fill: #0a0c0f;
+                }
+
+                /* -- */
+                .c-window-border,
+                .c-window-border > a,
+                a.c-window-border,
+                .c-window-border-hover:hover {
+                    color: #c2c9d6;
+                }
+
+                /* -- */
+
+                .bc-window-border {
+                    border-color: #c2c9d6;
+                }
+
+                .fill-window-border,
+                .fill-window-border path,
+                .fill-window-border-hover:hover path {
+                    fill: #c2c9d6;
+                }
+                .bg-window-border-fill,
+                .fill-bg-window-border {
+                    fill: #0a0c0f;
+                }
+
+                /* -- */
+                .c-window-border,
+                .c-window-border > a,
+                a.c-window-border,
+                .c-window-border-hover:hover {
+                    color: #c2c9d6;
+                }
+
+                .c-window-border-bg {
+                    background-color: #0a0c0f;
+                }
+
+                /* -- */
+
+                .bc-window-border {
+                    border-color: #c2c9d6;
+                }
+
+                .fill-window-border,
+                .fill-window-border path,
+                .fill-window-border-hover:hover path {
+                    fill: #c2c9d6;
+                }
+
+                .fill-window-border-c {
+                    fill: #0a0c0f;
+                }
+
+                .circle-window-border circle {
+                    stroke: #c2c9d6;
+                }
+            
+
+                .bg-tab-icon,
+                .bg-tab-icon-hover:hover {
+                    background-color: #3847bf;
+                }
+
+                /* -- */
+
+                .bg-tab-icon-c,
+                .bg-tab-icon-c > a,
+                a.bg-tab-icon-c {
+                    color: #ffffff;
+                }
+
+                .bg-tab-icon-fill,
+                .fill-bg-tab-icon {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-tab-icon,
+                .c-tab-icon > a,
+                a.c-tab-icon,
+                .c-tab-icon-hover:hover {
+                    color: #3847bf;
+                }
+
+                /* -- */
+
+                .bc-tab-icon {
+                    border-color: #3847bf;
+                }
+
+                .fill-tab-icon,
+                .fill-tab-icon path,
+                .fill-tab-icon-hover:hover path {
+                    fill: #3847bf;
+                }
+                .bg-tab-icon-fill,
+                .fill-bg-tab-icon {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-tab-icon,
+                .c-tab-icon > a,
+                a.c-tab-icon,
+                .c-tab-icon-hover:hover {
+                    color: #3847bf;
+                }
+
+                .c-tab-icon-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-tab-icon {
+                    border-color: #3847bf;
+                }
+
+                .fill-tab-icon,
+                .fill-tab-icon path,
+                .fill-tab-icon-hover:hover path {
+                    fill: #3847bf;
+                }
+
+                .fill-tab-icon-c {
+                    fill: #ffffff;
+                }
+
+                .circle-tab-icon circle {
+                    stroke: #3847bf;
+                }
+            
+
+                .bg-inactive-tab-icon,
+                .bg-inactive-tab-icon-hover:hover {
+                    background-color: #333b4c;
+                }
+
+                /* -- */
+
+                .bg-inactive-tab-icon-c,
+                .bg-inactive-tab-icon-c > a,
+                a.bg-inactive-tab-icon-c {
+                    color: #ffffff;
+                }
+
+                .bg-inactive-tab-icon-fill,
+                .fill-bg-inactive-tab-icon {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-inactive-tab-icon,
+                .c-inactive-tab-icon > a,
+                a.c-inactive-tab-icon,
+                .c-inactive-tab-icon-hover:hover {
+                    color: #333b4c;
+                }
+
+                /* -- */
+
+                .bc-inactive-tab-icon {
+                    border-color: #333b4c;
+                }
+
+                .fill-inactive-tab-icon,
+                .fill-inactive-tab-icon path,
+                .fill-inactive-tab-icon-hover:hover path {
+                    fill: #333b4c;
+                }
+                .bg-inactive-tab-icon-fill,
+                .fill-bg-inactive-tab-icon {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-inactive-tab-icon,
+                .c-inactive-tab-icon > a,
+                a.c-inactive-tab-icon,
+                .c-inactive-tab-icon-hover:hover {
+                    color: #333b4c;
+                }
+
+                .c-inactive-tab-icon-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-inactive-tab-icon {
+                    border-color: #333b4c;
+                }
+
+                .fill-inactive-tab-icon,
+                .fill-inactive-tab-icon path,
+                .fill-inactive-tab-icon-hover:hover path {
+                    fill: #333b4c;
+                }
+
+                .fill-inactive-tab-icon-c {
+                    fill: #ffffff;
+                }
+
+                .circle-inactive-tab-icon circle {
+                    stroke: #333b4c;
+                }
+            
+
+                .bg-menu-icons,
+                .bg-menu-icons-hover:hover {
+                    background-color: #333b4c;
+                }
+
+                /* -- */
+
+                .bg-menu-icons-c,
+                .bg-menu-icons-c > a,
+                a.bg-menu-icons-c {
+                    color: #ffffff;
+                }
+
+                .bg-menu-icons-fill,
+                .fill-bg-menu-icons {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-menu-icons,
+                .c-menu-icons > a,
+                a.c-menu-icons,
+                .c-menu-icons-hover:hover {
+                    color: #333b4c;
+                }
+
+                /* -- */
+
+                .bc-menu-icons {
+                    border-color: #333b4c;
+                }
+
+                .fill-menu-icons,
+                .fill-menu-icons path,
+                .fill-menu-icons-hover:hover path {
+                    fill: #333b4c;
+                }
+                .bg-menu-icons-fill,
+                .fill-bg-menu-icons {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-menu-icons,
+                .c-menu-icons > a,
+                a.c-menu-icons,
+                .c-menu-icons-hover:hover {
+                    color: #333b4c;
+                }
+
+                .c-menu-icons-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-menu-icons {
+                    border-color: #333b4c;
+                }
+
+                .fill-menu-icons,
+                .fill-menu-icons path,
+                .fill-menu-icons-hover:hover path {
+                    fill: #333b4c;
+                }
+
+                .fill-menu-icons-c {
+                    fill: #ffffff;
+                }
+
+                .circle-menu-icons circle {
+                    stroke: #333b4c;
+                }
+            
+
+                .bg-text-dark,
+                .bg-text-dark-hover:hover {
+                    background-color: #0a0c0f;
+                }
+
+                /* -- */
+
+                .bg-text-dark-c,
+                .bg-text-dark-c > a,
+                a.bg-text-dark-c {
+                    color: #ffffff;
+                }
+
+                .bg-text-dark-fill,
+                .fill-bg-text-dark {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-text-dark,
+                .c-text-dark > a,
+                a.c-text-dark,
+                .c-text-dark-hover:hover {
+                    color: #0a0c0f;
+                }
+
+                /* -- */
+
+                .bc-text-dark {
+                    border-color: #0a0c0f;
+                }
+
+                .fill-text-dark,
+                .fill-text-dark path,
+                .fill-text-dark-hover:hover path {
+                    fill: #0a0c0f;
+                }
+                .bg-text-dark-fill,
+                .fill-bg-text-dark {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-text-dark,
+                .c-text-dark > a,
+                a.c-text-dark,
+                .c-text-dark-hover:hover {
+                    color: #0a0c0f;
+                }
+
+                .c-text-dark-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-text-dark {
+                    border-color: #0a0c0f;
+                }
+
+                .fill-text-dark,
+                .fill-text-dark path,
+                .fill-text-dark-hover:hover path {
+                    fill: #0a0c0f;
+                }
+
+                .fill-text-dark-c {
+                    fill: #ffffff;
+                }
+
+                .circle-text-dark circle {
+                    stroke: #0a0c0f;
+                }
+            
+
+                .bg-text-light,
+                .bg-text-light-hover:hover {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bg-text-light-c,
+                .bg-text-light-c > a,
+                a.bg-text-light-c {
+                    color: #0a0c0f;
+                }
+
+                .bg-text-light-fill,
+                .fill-bg-text-light {
+                    fill: #0a0c0f;
+                }
+
+                /* -- */
+                .c-text-light,
+                .c-text-light > a,
+                a.c-text-light,
+                .c-text-light-hover:hover {
+                    color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-text-light {
+                    border-color: #ffffff;
+                }
+
+                .fill-text-light,
+                .fill-text-light path,
+                .fill-text-light-hover:hover path {
+                    fill: #ffffff;
+                }
+                .bg-text-light-fill,
+                .fill-bg-text-light {
+                    fill: #0a0c0f;
+                }
+
+                /* -- */
+                .c-text-light,
+                .c-text-light > a,
+                a.c-text-light,
+                .c-text-light-hover:hover {
+                    color: #ffffff;
+                }
+
+                .c-text-light-bg {
+                    background-color: #0a0c0f;
+                }
+
+                /* -- */
+
+                .bc-text-light {
+                    border-color: #ffffff;
+                }
+
+                .fill-text-light,
+                .fill-text-light path,
+                .fill-text-light-hover:hover path {
+                    fill: #ffffff;
+                }
+
+                .fill-text-light-c {
+                    fill: #0a0c0f;
+                }
+
+                .circle-text-light circle {
+                    stroke: #ffffff;
+                }
+            
+
+                .bg-link,
+                .bg-link-hover:hover {
+                    background-color: #3847bf;
+                }
+
+                /* -- */
+
+                .bg-link-c,
+                .bg-link-c > a,
+                a.bg-link-c {
+                    color: #ffffff;
+                }
+
+                .bg-link-fill,
+                .fill-bg-link {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-link,
+                .c-link > a,
+                a.c-link,
+                .c-link-hover:hover {
+                    color: #3847bf;
+                }
+
+                /* -- */
+
+                .bc-link {
+                    border-color: #3847bf;
+                }
+
+                .fill-link,
+                .fill-link path,
+                .fill-link-hover:hover path {
+                    fill: #3847bf;
+                }
+                .bg-link-fill,
+                .fill-bg-link {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-link,
+                .c-link > a,
+                a.c-link,
+                .c-link-hover:hover {
+                    color: #3847bf;
+                }
+
+                .c-link-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-link {
+                    border-color: #3847bf;
+                }
+
+                .fill-link,
+                .fill-link path,
+                .fill-link-hover:hover path {
+                    fill: #3847bf;
+                }
+
+                .fill-link-c {
+                    fill: #ffffff;
+                }
+
+                .circle-link circle {
+                    stroke: #3847bf;
+                }
+            
+
+                .bg-action,
+                .bg-action-hover:hover {
+                    background-color: #3847bf;
+                }
+
+                /* -- */
+
+                .bg-action-c,
+                .bg-action-c > a,
+                a.bg-action-c {
+                    color: #ffffff;
+                }
+
+                .bg-action-fill,
+                .fill-bg-action {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-action,
+                .c-action > a,
+                a.c-action,
+                .c-action-hover:hover {
+                    color: #3847bf;
+                }
+
+                /* -- */
+
+                .bc-action {
+                    border-color: #3847bf;
+                }
+
+                .fill-action,
+                .fill-action path,
+                .fill-action-hover:hover path {
+                    fill: #3847bf;
+                }
+                .bg-action-fill,
+                .fill-bg-action {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-action,
+                .c-action > a,
+                a.c-action,
+                .c-action-hover:hover {
+                    color: #3847bf;
+                }
+
+                .c-action-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-action {
+                    border-color: #3847bf;
+                }
+
+                .fill-action,
+                .fill-action path,
+                .fill-action-hover:hover path {
+                    fill: #3847bf;
+                }
+
+                .fill-action-c {
+                    fill: #ffffff;
+                }
+
+                .circle-action circle {
+                    stroke: #3847bf;
+                }
+            
+
+                .bg-error,
+                .bg-error-hover:hover {
+                    background-color: #CE190D;
+                }
+
+                /* -- */
+
+                .bg-error-c,
+                .bg-error-c > a,
+                a.bg-error-c {
+                    color: #ffffff;
+                }
+
+                .bg-error-fill,
+                .fill-bg-error {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-error,
+                .c-error > a,
+                a.c-error,
+                .c-error-hover:hover {
+                    color: #CE190D;
+                }
+
+                /* -- */
+
+                .bc-error {
+                    border-color: #CE190D;
+                }
+
+                .fill-error,
+                .fill-error path,
+                .fill-error-hover:hover path {
+                    fill: #CE190D;
+                }
+                .bg-error-fill,
+                .fill-bg-error {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-error,
+                .c-error > a,
+                a.c-error,
+                .c-error-hover:hover {
+                    color: #CE190D;
+                }
+
+                .c-error-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-error {
+                    border-color: #CE190D;
+                }
+
+                .fill-error,
+                .fill-error path,
+                .fill-error-hover:hover path {
+                    fill: #CE190D;
+                }
+
+                .fill-error-c {
+                    fill: #ffffff;
+                }
+
+                .circle-error circle {
+                    stroke: #CE190D;
+                }
+            
+
+                .bg-in-progress,
+                .bg-in-progress-hover:hover {
+                    background-color: #3847bf;
+                }
+
+                /* -- */
+
+                .bg-in-progress-c,
+                .bg-in-progress-c > a,
+                a.bg-in-progress-c {
+                    color: #ffffff;
+                }
+
+                .bg-in-progress-fill,
+                .fill-bg-in-progress {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-in-progress,
+                .c-in-progress > a,
+                a.c-in-progress,
+                .c-in-progress-hover:hover {
+                    color: #3847bf;
+                }
+
+                /* -- */
+
+                .bc-in-progress {
+                    border-color: #3847bf;
+                }
+
+                .fill-in-progress,
+                .fill-in-progress path,
+                .fill-in-progress-hover:hover path {
+                    fill: #3847bf;
+                }
+                .bg-in-progress-fill,
+                .fill-bg-in-progress {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-in-progress,
+                .c-in-progress > a,
+                a.c-in-progress,
+                .c-in-progress-hover:hover {
+                    color: #3847bf;
+                }
+
+                .c-in-progress-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-in-progress {
+                    border-color: #3847bf;
+                }
+
+                .fill-in-progress,
+                .fill-in-progress path,
+                .fill-in-progress-hover:hover path {
+                    fill: #3847bf;
+                }
+
+                .fill-in-progress-c {
+                    fill: #ffffff;
+                }
+
+                .circle-in-progress circle {
+                    stroke: #3847bf;
+                }
+            
+
+                .bg-complete,
+                .bg-complete-hover:hover {
+                    background-color: #22AA00;
+                }
+
+                /* -- */
+
+                .bg-complete-c,
+                .bg-complete-c > a,
+                a.bg-complete-c {
+                    color: #ffffff;
+                }
+
+                .bg-complete-fill,
+                .fill-bg-complete {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-complete,
+                .c-complete > a,
+                a.c-complete,
+                .c-complete-hover:hover {
+                    color: #22AA00;
+                }
+
+                /* -- */
+
+                .bc-complete {
+                    border-color: #22AA00;
+                }
+
+                .fill-complete,
+                .fill-complete path,
+                .fill-complete-hover:hover path {
+                    fill: #22AA00;
+                }
+                .bg-complete-fill,
+                .fill-bg-complete {
+                    fill: #ffffff;
+                }
+
+                /* -- */
+                .c-complete,
+                .c-complete > a,
+                a.c-complete,
+                .c-complete-hover:hover {
+                    color: #22AA00;
+                }
+
+                .c-complete-bg {
+                    background-color: #ffffff;
+                }
+
+                /* -- */
+
+                .bc-complete {
+                    border-color: #22AA00;
+                }
+
+                .fill-complete,
+                .fill-complete path,
+                .fill-complete-hover:hover path {
+                    fill: #22AA00;
+                }
+
+                .fill-complete-c {
+                    fill: #ffffff;
+                }
+
+                .circle-complete circle {
+                    stroke: #22AA00;
+                }
+            
+
+                .bg-source-bg,
+                .bg-source-bg-hover:hover {
+                    background-color: #f3f4f7;
+                }
+
+                /* -- */
+
+                .bg-source-bg-c,
+                .bg-source-bg-c > a,
+                a.bg-source-bg-c {
+                    color: #0a0c0f;
+                }
+
+                .bg-source-bg-fill,
+                .fill-bg-source-bg {
+                    fill: #0a0c0f;
+                }
+
+                /* -- */
+                .c-source-bg,
+                .c-source-bg > a,
+                a.c-source-bg,
+                .c-source-bg-hover:hover {
+                    color: #f3f4f7;
+                }
+
+                /* -- */
+
+                .bc-source-bg {
+                    border-color: #f3f4f7;
+                }
+
+                .fill-source-bg,
+                .fill-source-bg path,
+                .fill-source-bg-hover:hover path {
+                    fill: #f3f4f7;
+                }
+                .bg-source-bg-fill,
+                .fill-bg-source-bg {
+                    fill: #0a0c0f;
+                }
+
+                /* -- */
+                .c-source-bg,
+                .c-source-bg > a,
+                a.c-source-bg,
+                .c-source-bg-hover:hover {
+                    color: #f3f4f7;
+                }
+
+                .c-source-bg-bg {
+                    background-color: #0a0c0f;
+                }
+
+                /* -- */
+
+                .bc-source-bg {
+                    border-color: #f3f4f7;
+                }
+
+                .fill-source-bg,
+                .fill-source-bg path,
+                .fill-source-bg-hover:hover path {
+                    fill: #f3f4f7;
+                }
+
+                .fill-source-bg-c {
+                    fill: #0a0c0f;
+                }
+
+                .circle-source-bg circle {
+                    stroke: #f3f4f7;
+                }
+            </style></head><body id="uw-glamor-2944"><div id="app-root" class="upload-popup-active"><div data-test="upload-widget-popup" data-language="en" class="css-5leaax fixed top-0 bottom-0 left-0 right-0 widget upload-popup font-root multiple_enabled advanced-options"><div class="css-5anb0a popup-box overflow-hidden br0 h-100 w-100 top-0 left-0"><div class="CloseButton App__StyledCloseButton-jtkEAE fiZFiY"><button data-test="close-dialog-icon" aria-label="Close" tabindex="0" class="css-1lcaxt5 BUTTON outline-0 flex-nowrap items-center justify-center pointer fw6 c-menu-icons"><div class="flex align-items-center relative"><div class="css-1bc28x8 dib fill-menu-icons box-16 fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M24 2.417 21.583 0 12 9.583 2.417 0 0 2.417 9.583 12 0 21.583 2.417 24 12 14.417 21.583 24 24 21.583 14.417 12z"></path></svg></div></div><span class="nowrap" data-debug="css-10gpf85"></span></button></div><header id="cloudinary-navbar" class="head header bg-window bg-window-fc bc-window-border files-active local-active"><nav class="menu" data-test="uw-top-menu"><div class="ResponsiveMenuItems__Container-elCygc gKCQkj"><div data-test="responsive-menu-toggle" class="ResponsiveMenuItems__MenuToggle-cAFtxG dpuAOV bc-window top-menu-height bc-window-border"><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="local-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">My Files</span></button></li></div><ul class="ResponsiveMenuItems__List-fnnMXR jTnXOl bc-window dropdown-items bc-window-border bg-window" data-test="responsive-menu-list"><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="local-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">My Files</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="url-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M12,0 C5.376,0 0,5.376 0,12 C0,18.624 5.376,24 12,24 C18.624,24 24,18.624 24,12 C24,5.376 18.624,0 12,0 Z M10.8,21.516 C6.06,20.928 2.4,16.896 2.4,12 C2.4,11.256 2.496,10.548 2.652,9.852 L8.4,15.6 L8.4,16.8 C8.4,18.12 9.48,19.2 10.8,19.2 L10.8,21.516 Z M19.08,18.468 C18.768,17.496 17.88,16.8 16.8,16.8 L15.6,16.8 L15.6,13.2 C15.6,12.54 15.06,12 14.4,12 L7.2,12 L7.2,9.6 L9.6,9.6 C10.26,9.6 10.8,9.06 10.8,8.4 L10.8,6 L13.2,6 C14.52,6 15.6,4.92 15.6,3.6 L15.6,3.108 C19.116,4.536 21.6,7.98 21.6,12 C21.6,14.496 20.64,16.764 19.08,18.468 Z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">Web Address</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="image_search-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M21.660768,11.142744 L12.79692,11.137368 L12.79692,14.737416 L17.862264,14.737416 C17.589072,16.261056 16.09152,19.040544 12.207984,19.040544 C8.790192,19.040544 6.001728,16.155312 6.001728,12.59988 C6.001728,9.04452 8.790192,6.159312 12.207984,6.159312 C14.152968,6.159312 15.454248,7.004472 16.19808,7.732992 L18.915,5.066448 C17.170488,3.40536 14.910912,2.39988 12.207984,2.39988 C6.673752,2.39988 2.197752,6.960816 2.197752,12.59988 C2.197752,18.23904 6.673752,22.799856 12.207984,22.799856 C19.095024,22.799856 22.642368,16.975344 21.660768,11.142744 Z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">Image Search</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="google_drive-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M7.65069124,3.5 L1,15 L4.47741935,21 L11.1179724,9.5 M9.69861751,15 L6.22119816,21 L19.5225806,21 L23,15 M22.4221198,14 L15.4672811,2 L8.53271889,2 L8.52258065,2 L15.4774194,14 L22.4221198,14 Z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">Google Drive</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="dropbox-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M12.0159787,4.64047936 L6.00798935,8.47536618 L12.0159787,12.310253 L6.00798935,16.1451398 L0,12.2782956 L6.00798935,8.44340879 L0,4.64047936 L6.00798935,0.805592543 L12.0159787,4.64047936 Z M5.97603196,17.3595206 L11.9840213,13.5246338 L17.9920107,17.3595206 L11.9840213,21.1944075 L5.97603196,17.3595206 Z M12.0159787,12.2782956 L18.023968,8.44340879 L12.0159787,4.64047936 L17.9920107,0.805592543 L24,4.64047936 L17.9920107,8.47536618 L24,12.310253 L17.9920107,16.1451398 L12.0159787,12.2782956 Z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">Dropbox</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="shutterstock-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M0 1.36967V22.6303C0 23.3868 0.613185 24 1.36967 24H22.6303C23.3868 24 24 23.3868 24 22.6303V1.36967C23.9999 0.613185 23.3868 0 22.6303 0H1.36967C0.613185 0 0 0.613185 0 1.36967ZM10.9419 6.54374H7.17549C6.79721 6.54374 6.48956 6.85139 6.48956 7.22966V10.8528H3.34697V7.22966C3.34697 5.11868 5.0645 3.40115 7.17549 3.40115H10.942L10.9419 6.54374ZM20.653 16.7703C20.653 18.8813 18.9355 20.5989 16.8245 20.5989H13.058V17.4563H16.8245C17.2028 17.4563 17.5104 17.1486 17.5104 16.7703V13.1472H20.653V16.7703Z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">Shutterstock</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="istock-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M22.6256524,-1.42108547e-14 C23.3819244,-1.42108547e-14 23.9950428,0.613057935 23.9950428,1.36939043 L23.9950428,1.36939043 L23.9950428,22.6256524 C23.9950428,23.3819849 23.3819244,23.9950428 22.6256524,23.9950428 L22.6256524,23.9950428 L1.36939043,23.9950428 C0.613057935,23.9950428 -1.42108547e-14,23.3819244 -1.42108547e-14,22.6256524 L-1.42108547e-14,22.6256524 L-1.42108547e-14,1.36939043 C-1.42108547e-14,0.613057935 0.613057935,-1.42108547e-14 1.36939043,-1.42108547e-14 L1.36939043,-1.42108547e-14 Z M15.3281919,3 C12.4073928,3 9.50824451,4.81303683 9.50824451,7.96103741 C9.50824451,9.95258577 10.6182923,11.1614742 12.0033533,11.9686148 C14.3714413,13.3533354 17.6451833,13.6306944 17.6451833,15.8969224 C17.6451833,17.1811908 16.5869128,18.1144 15.0754435,18.1144 C13.4637192,18.1144 11.9280413,17.2819831 10.919527,16.1746214 L10.9195263,16.1746214 L8.70272237,18.4909463 C10.5167656,20.155644 12.7080213,21.135992 15.0754428,21.135992 C18.2489917,21.135992 21.0466742,18.9696178 21.0466742,15.8474987 C21.0466742,9.90081599 12.9097351,10.7839282 12.9097351,7.93648876 C12.9097351,6.57630993 14.3465655,6.0239381 15.6294263,6.0239381 C16.7886258,6.0239381 17.971966,6.52621981 18.6792527,7.18105675 L18.6792527,7.18105675 L20.4421926,4.66275284 C18.7787665,3.42858135 17.1160144,3 15.3281919,3 Z M7.77742866,8.66704571 L4.50429252,8.66704571 L4.50429252,20.885861 L7.77742866,20.885861 L7.77742866,8.66704571 Z M6.14149641,3 C4.95942925,3 4,3.95808418 4,5.14115912 C4,6.3222212 4.95942925,7.28225023 6.14149641,7.28225023 C7.32423473,7.28225023 8.28232163,6.3222212 8.28232163,5.14115912 C8.28232163,3.95808418 7.32423473,3 6.14149641,3 Z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">iStock</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="getty-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="m20.02173,1.16896c-1.98829,-0.06368 -3.30323,0.444 -4.11169,1.45871c-1.07855,-0.88795 -2.83114,-1.45871 -4.31427,-1.45871c-4.5506,0 -6.90971,2.85374 -6.90971,5.73962c0,1.99791 1.14609,3.26615 2.59543,4.37611c-0.77531,0.22198 -2.73048,1.42657 -2.73048,3.01204c0,1.77592 1.78636,2.18835 2.59543,2.66387l0,0.06368c-1.51688,0 -3.16818,0.9826 -3.16818,3.04419c0,2.60018 3.10064,3.93153 7.81947,3.93153c5.59544,0 8.12334,-2.53651 8.12334,-4.88319c0,-6.5954 -11.52722,-2.98048 -11.52722,-5.64437c0,-0.95103 1.44934,-1.01471 3.26883,-1.01471c4.38178,0 6.60646,-2.21992 6.60646,-5.32716c0,-1.26826 -0.40455,-2.21992 -0.9435,-2.91742c0.64026,-0.38029 1.71881,-0.38029 2.69609,-0.38029l0,-2.66389zm-9.23504,16.48914c4.0448,0 5.29155,1.1415 5.29155,1.90271c0,0.57073 -0.90973,1.83898 -3.60647,1.83898c-3.5052,0 -4.65129,-0.57074 -4.65129,-1.83898c0,-0.69753 0.67403,-1.90271 2.96622,-1.90271zm0.77534,-8.11779c-1.78638,0 -3.03375,-1.20456 -3.03375,-2.72695s1.24738,-2.72698 3.03375,-2.72698c1.58377,0 2.86491,1.20459 2.86491,2.72698s-1.28114,2.72695 -2.86491,2.72695z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">gettyimages</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="unsplash-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">Unsplash</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="instagram-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M23.93,7.05 C23.9089806,6.05533859 23.7196359,5.07142251 23.37,4.14 C23.0747624,3.3353419 22.6071795,2.60495698 22,2 C21.395043,1.39282049 20.6646581,0.925237617 19.86,0.63 C18.9285775,0.280364112 17.9446614,0.091019437 16.95,0.07 C15.67,0 15.26,0 12,0 C8.74,0 8.33,0 7.05,0.07 C6.05533859,0.091019437 5.07142251,0.280364112 4.14,0.63 C3.3353419,0.925237617 2.60495698,1.39282049 2,2 C1.39282049,2.60495698 0.925237617,3.3353419 0.63,4.14 C0.280364112,5.07142251 0.091019437,6.05533859 0.07,7.05 C0,8.33 0,8.74 0,12 C0,15.26 0,15.67 0.07,16.95 C0.091019437,17.9446614 0.280364112,18.9285775 0.63,19.86 C0.925237617,20.6646581 1.39282049,21.395043 2,22 C2.60107643,22.6095702 3.32800742,23.0805395 4.13,23.38 C5.06142251,23.7296359 6.04533859,23.9189806 7.04,23.94 C8.33,24 8.74,24 12,24 C15.26,24 15.67,24 16.95,23.93 C17.9446614,23.9089806 18.9285775,23.7196359 19.86,23.37 C21.4718745,22.7461736 22.7461736,21.4718745 23.37,19.86 C23.7196359,18.9285775 23.9089806,17.9446614 23.93,16.95 C24,15.67 24,15.26 24,12 C24,8.74 24,8.33 23.93,7.05 Z M21.78,16.85 C21.7719985,17.6113231 21.6333164,18.3656182 21.37,19.08 C20.9635455,20.1262253 20.1362253,20.9535455 19.09,21.36 C18.3756182,21.6233164 17.6213231,21.7619985 16.86,21.77 C15.59,21.83 15.21,21.84 12,21.84 C8.79,21.84 8.41,21.84 7.14,21.77 C6.37867687,21.7619985 5.62438182,21.6233164 4.91,21.36 C4.38851372,21.1669155 3.91694979,20.8593738 3.53,20.46 C3.13062621,20.0730502 2.82308451,19.6014863 2.63,19.08 C2.36668356,18.3656182 2.22800151,17.6113231 2.22,16.85 C2.16,15.58 2.15,15.2 2.15,11.99 C2.15,8.78 2.15,8.4 2.22,7.13 C2.22800151,6.36867687 2.36668356,5.61438182 2.63,4.9 C2.82308451,4.37851372 3.13062621,3.90694979 3.53,3.52 C3.91694979,3.12062621 4.38851372,2.81308451 4.91,2.62 C5.62438182,2.35668356 6.37867687,2.21800151 7.14,2.21 C8.41,2.15 8.79,2.14 12,2.14 C15.21,2.14 15.59,2.14 16.86,2.21 C17.6213231,2.21800151 18.3756182,2.35668356 19.09,2.62 C19.6114863,2.81308451 20.0830502,3.12062621 20.47,3.52 C20.8693738,3.90694979 21.1769155,4.37851372 21.37,4.9 C21.6333164,5.61438182 21.7719985,6.36867687 21.78,7.13 C21.84,8.4 21.85,8.78 21.85,11.99 C21.85,15.2 21.84,15.59 21.78,16.86 L21.78,16.85 Z M12,5.84 C8.59792594,5.84 5.84,8.59792594 5.84,12 C5.84,15.4020741 8.59792594,18.16 12,18.16 C15.4020741,18.16 18.16,15.4020741 18.16,12 C18.16,10.3662664 17.5110019,8.79944632 16.3557778,7.64422223 C15.2005537,6.48899814 13.6337336,5.84 12,5.84 Z M12,16 C9.790861,16 8,14.209139 8,12 C8,9.790861 9.790861,8 12,8 C14.209139,8 16,9.790861 16,12 C16,13.060866 15.5785726,14.0782816 14.8284271,14.8284271 C14.0782816,15.5785726 13.060866,16 12,16 Z M18.39,4.17 C17.59471,4.17 16.95,4.81470996 16.95,5.61 C16.95,6.40529004 17.59471,7.05 18.39,7.05 C19.18529,7.05 19.83,6.40529004 19.83,5.61 C19.83,5.22808825 19.6782861,4.86181862 19.4082338,4.59176624 C19.1381814,4.32171385 18.7719117,4.17 18.39,4.17 Z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">Instagram</span></button></li><li class="ResponsiveMenuItems__ListItem-fFvmJU eaPIxM"><button class="TopMenuItem__ItemButton-bKlfLg eLbqKP bc-window b c-menu-icons" data-test="facebook-btn"><div class="TopMenuItem__ItemIconBox-gHgURw jqvzlR"><div class="css-nil dib fill-inactive-tab-icon w-100 h-100 box- fill-"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M20.632416,1.89592926 L2.107512,1.89592926 C1.642776,1.89592926 1.265616,2.27292884 1.265616,2.73805642 L1.265616,21.2627394 C1.265616,21.7277078 1.642776,22.1047074 2.107512,22.1047074 L12.001704,22.1047074 L12.001704,14.5264497 L9.475584,14.5264497 L9.475584,11.3689162 L12.001704,11.3689162 L12.001704,8.84276211 C12.001704,6.23234526 13.65396,4.94810021 15.982416,4.94810021 C17.097864,4.94810021 18.056352,5.03113516 18.336096,5.06830989 L18.336096,7.79604884 L16.721112,7.79675368 C15.45456,7.79675368 15.159072,8.39857516 15.159072,9.28169684 L15.159072,11.3689162 L18.31716,11.3689162 L17.68536,14.5264497 L15.159072,14.5264497 L15.209328,22.1047074 L20.632416,22.1047074 C21.09756,22.1047074 21.474312,21.7277078 21.474312,21.2627394 L21.474312,2.73805642 C21.474312,2.27292884 21.09756,1.89592926 20.632416,1.89592926 Z"></path></svg></div></div><span class="TopMenuItem__ItemTitle-kgZKIe iBxCmr">Facebook</span></button></li></ul></div></nav></header><div class="panel content-wrap bg-source-bg bg-source-bg-c local h-100 h-auto-ns active flex items-center"><div class="panel-inner-container"><div data-test="drag-area" class="bg-window drag_area content-wrap bg-source-bg bg-source-bg-c browse-box"><div class="drag_content"><div class="holder bg-source-bg bg-source-bg-c bc-window-border"><div class="box centered"><div class="icon-upload mb4 tc dn db-ns"><div class="css-1dmzhfy dib box-100 fill-window-border"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"></path></svg></div></div><div class="mb4 tc db dn-ns"><div class="css-dkukfs dib box-125 fill-window-border"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M9.86230578,18.2138676 L9.86230578,10.5085598 C9.86287991,10.2164442 9.74761305,9.93612678 9.54198396,9.72956943 C9.33635484,9.52301206 9.05729718,9.40722486 8.76649426,9.40780159 L1.09581365,9.40780159 C0.805010736,9.40722486 0.525953075,9.52301206 0.320323962,9.72956943 C0.114694849,9.93612678 -0.000572009144,10.2164442 2.13461315e-06,10.5085598 L2.13461315e-06,18.2138676 C-0.000572009144,18.5059833 0.114694849,18.7863006 0.320323962,18.992858 C0.525953075,19.1994154 0.805010736,19.3152026 1.09581365,19.3146258 L8.76649426,19.3146258 C9.05729718,19.3152026 9.33635484,19.1994154 9.54198396,18.992858 C9.74761305,18.7863006 9.86287991,18.5059833 9.86230578,18.2138676 Z M3.0134838,15.1802819 L4.3832482,16.8335861 L6.30091835,14.3547132 L8.76649426,17.6569879 L1.09581365,17.6569879 L3.0134838,15.1802819 Z M22.0240879,10.3872164 L22.4382529,12.6472378 L20.9649473,12.2138684 L20.5507823,9.95384702 L19.5692976,9.67215692 L19.9834625,11.9321783 L18.5101569,11.4988089 L18.0959919,9.24095437 L17.1145072,8.95493058 L17.5265151,11.2149519 L16.0532094,10.7815826 L15.6412015,8.52156119 L15.1493806,8.37854929 C14.8893518,8.30303211 14.6100903,8.33463263 14.3733033,8.46636819 C14.1365163,8.59810378 13.961696,8.81913001 13.8874717,9.0806077 L12.1747269,15.0004336 C12.0971007,15.2645395 12.1283049,15.5488961 12.2613353,15.7896763 C12.3943658,16.0304565 12.6180785,16.2074901 12.8822588,16.2810401 L20.7406079,18.5670636 C21.0014925,18.6433563 21.2818788,18.6122017 21.5198573,18.4804787 C21.7578359,18.3487556 21.9338329,18.1272986 22.0089881,17.8650052 L24,10.9570972 L22.0240879,10.3872164 Z M7.54125619,4.25503955 C7.29113106,4.31978718 7.07690612,4.48179478 6.945803,4.70535103 C6.81469987,4.92890728 6.7774818,5.19565874 6.84235278,5.44680537 L8.71903786,13.0697729 C8.78028908,13.3219212 8.93887905,13.5392362 9.15982884,13.6737866 C9.38077863,13.808337 9.64593678,13.8490692 9.89681953,13.7869993 L15.591588,12.3677145 C16.1149481,12.2375528 16.4344627,11.70618 16.3055912,11.1802824 L14.8948417,5.46414014 L11.3442399,3.31462798 L7.54125619,4.25503955 Z M11.6850631,6.76208146 L11.0379303,4.14236351 L14.2908511,6.11202738 L11.6850631,6.76208146 Z"></path></svg></div></div><strong class="c-window-border title single-text">Drag and Drop an asset here</strong><strong class="c-window-border title multi-text">Drag and Drop assets here</strong><strong class="c-window-border mb4 title add single-text c-action">Drop a file to upload</strong><strong class="c-window-border mb4 title add multi-text c-action">Drop files to upload</strong><span class="or">Or</span><div class="upload_button_holder"><input type="file" name="file" class="cloudinary_fileupload" tabindex="-1" multiple="multiple"><button tabindex="0" class="css-z8ct7j BUTTON outline-0 flex-nowrap items-center justify-center pointer fw6 bg-link bg-link-c"><span class="nowrap">Browse</span></button></div></div></div></div></div><footer class="bg-window flex items-center foot bt bc-window-border  justify-end"><div class="TabFooter__AdvancedBox-pwKOT fzbliM advance-box flex flex-column bg-window ba bc-window" data-test="advanced-box"><div class="flex items-center pointer pl3 pl0-ns btn-advance-wrap" data-test="btn-advanced"><div class="css-nil dib box-xxs fill-link"><svg class="db" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid"><path d="M2.8 19.4l9.2-9.1 9.2 9.1 2.8-2.8-12-12-12 12z"></path></svg></div><button data-test="btn-advanced" type="button" class="btn-advance c-link ml2" tabindex="0">Advanced</button></div><div></div></div><div class="flex items-center justify-end"></div></footer></div></div></div></div></div></body></html>
