@@ -122,12 +122,12 @@ const UpdateProduct = () => {
 
     return (
         <Fragment>
-            <MetaData title="Create product" />
+            <MetaData title="Update product" />
             <div className="dashboard">
                 <Sidebar />
                 <div className="newProductContainer">
                     <form encType='multipart/form-data' className="createProductForm" onSubmit={updateProductSubmitHandler}>
-                        <h1>Create Product</h1>
+                        <h1>Update Product</h1>
                         <div>
                             <MdSpellcheck />
                             <input type="text"
@@ -188,7 +188,7 @@ const UpdateProduct = () => {
                             id="createProductBtn"
                             type="submit"
                             disabled={loading ? true : false}>
-                            Create
+                           Update
                         </Button>
                     </form>
                 </div>
