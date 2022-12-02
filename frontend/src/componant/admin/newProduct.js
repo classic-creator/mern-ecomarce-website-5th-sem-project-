@@ -47,7 +47,7 @@ const NewProduct = () => {
         }
         if (success) {
             alert.success("Create product successfully")
-            navigate("/admin/dashboard")
+            navigate("/admin/product")
             dispatch({ type: NEW_PRODUCT_RESET })
         }
     }, [dispatch, alert, error, success, navigate])

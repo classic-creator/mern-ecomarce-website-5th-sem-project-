@@ -17,7 +17,7 @@ export const footer = () => {
 
             <div className="midfooter">
                 <h1>Ecomerce</h1>
-                <p>high quality is our first priporty</p>
+                <p>high quality is our first priorty</p>
                 <p>copyright 2022 &copy; himangshu khound</p>
             </div>
 

@@ -31,10 +31,10 @@ const Home = () => {
         {loading ? (<Loader/>) :  
         ( <Fragment>
 
-            <MetaData title="ECOMARCE" />
+            <MetaData title="ECOMERCE" />
             <div className="banner">
-                <p>wellcome to ecomarce</p>
-                <h1>FIND AMAZING PRODUCTS BELLOW</h1>
+                <p>wellcome to ecomerce</p>
+                <h1>FIND AMAZING PRODUCTS BELOW</h1>
 
                 <a href="#container">
                     <button>
